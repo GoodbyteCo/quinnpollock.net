@@ -1,0 +1,415 @@
+@font-face
+{
+    font-family: "title";
+    src: url('https://guinane.xyz/quinnpollock.net/font/webfont-1.woff2') format('woff2'),
+        url('https://guinane.xyz/quinnpollock.net/font/webfont-1.woff') format('woff'),
+        url('https://guinane.xyz/quinnpollock.net/font/webfont-1.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: "text";
+    src: url('https://guinane.xyz/quinnpollock.net/font/webfont-2.woff2') format('woff2'),
+        url('https://guinane.xyz/quinnpollock.net/font/webfont-2.woff') format('woff'),
+        url('https://guinane.xyz/quinnpollock.net/font/webfont-2.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html
+{
+	background: #F0F0F0;
+	font-size: 12px;
+	line-height: 1.4;
+	color: #000000;
+	font-family: "text", monospace;
+	letter-spacing: 0.04rem;
+
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased; 
+	-moz-osx-font-smoothing: grayscale;
+	-ms-font-feature-settings:"kern" 1;
+	-o-font-feature-settings:"kern" 1;
+	-webkit-font-feature-settings:"kern" 1;
+	font-feature-settings:"kern" 1;
+	-webkit-font-kerning: normal;
+	        font-kerning: normal;   
+}
+
+body
+{
+	margin: 0;
+	min-width: 700px;
+}
+
+header
+{
+	margin: 0;
+	position: relative;
+	margin-bottom: 80px;
+}
+
+nav
+{
+	background: #F0F0F0;
+	border-right: 1px solid #000000;
+	width: 400px;
+	padding: 40px;
+	height: 100vh;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	-webkit-transition: all 0.4s ease-out;
+	-o-transition: all 0.4s ease-out;
+	transition: all 0.4s ease-out;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999;
+}
+
+nav a
+{
+	text-decoration: none;
+	color: #000000;
+	font-size: 3.4rem;
+	text-transform: capitalize;
+	line-height: 1.75;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
+	display: block;
+	white-space: nowrap;
+	letter-spacing: 0;
+	font-family: "title", serif;
+	-webkit-transition: opacity 0.2s ease;
+	-o-transition: opacity 0.2s ease;
+	transition: opacity 0.2s ease; 
+}
+
+nav ul:hover > li > a
+{
+	opacity: 0.4;
+}
+
+nav ul > li > a:hover
+{
+	opacity: 1;
+}
+
+nav ul
+{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	margin-left: 65px;
+	opacity: 0.9;
+	-webkit-transition: all 0.25s ease-out 0.15s;
+	-o-transition: all 0.25s ease-out 0.15s;
+	transition: all 0.25s ease-out 0.15s;
+}
+
+.wordmark
+{
+	display: block;
+	text-transform: uppercase;
+	position: absolute;
+	left: 65px;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
+	top: 21px;
+	-webkit-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+
+.wordmark:first-of-type
+{
+	top: 5px;
+}
+
+#dark-mode-btn
+{
+	border: none;
+	outline: none;
+	-webkit-box-shadow: none;
+	        box-shadow: none;
+	background: transparent;
+	border-radius: 0;
+	padding: 0;
+	margin: 30px 0 0 65px;
+	white-space: nowrap;
+	font-size: 1.3rem;
+	font-family: "title", serif;
+	text-transform: uppercase;
+	cursor: pointer;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
+	-webkit-transition: all 0.25s ease-out 0.15s;
+	-o-transition: all 0.25s ease-out 0.15s;
+	transition: all 0.25s ease-out 0.15s;
+}
+
+nav.closed
+{
+	width: 120px;
+	-webkit-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+}
+
+nav.closed ul, nav.closed #dark-mode-btn
+{
+	opacity: 0;
+	pointer-events: none;
+	-webkit-transition: all 0.15s ease 0s;
+	-o-transition: all 0.15s ease 0s;
+	transition: all 0.15s ease 0s;
+}
+
+nav.closed .wordmark
+{
+	opacity: 0;
+	pointer-events: none;
+	-webkit-transform: translateX(-30px);
+	    -ms-transform: translateX(-30px);
+	        transform: translateX(-30px);
+	-webkit-transition: all 0.2s ease-in;
+	-o-transition: all 0.2s ease-in;
+	transition: all 0.2s ease-in;
+}
+
+nav.closed .wordmark:first-of-type
+{
+	-webkit-transform: translateX(-20px);
+	    -ms-transform: translateX(-20px);
+	        transform: translateX(-20px);
+}
+
+#menu-btn
+{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 120px;
+	height: 190px;
+}
+
+#menu-text
+{
+	text-transform: uppercase;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
+	-webkit-transform: rotate(-90deg);
+	    -ms-transform: rotate(-90deg);
+	        transform: rotate(-90deg);
+	display: block;
+	line-height: 40px;
+}
+
+#menu-stack div
+{
+	-webkit-transition: -webkit-transform 0.4s ease;
+	transition: -webkit-transform 0.4s ease;
+	-o-transition: transform 0.4s ease;
+	transition: transform 0.4s ease;
+	transition: transform 0.4s ease, -webkit-transform 0.4s ease;
+	height: 1px;
+	background: #000000;
+	-webkit-transform: rotate(25deg) translateY(-3px) translateX(-8px) scaleX(0.8);
+	    -ms-transform: rotate(25deg) translateY(-3px) translateX(-8px) scaleX(0.8);
+	        transform: rotate(25deg) translateY(-3px) translateX(-8px) scaleX(0.8);
+	width: 30px;
+	margin-top: 10px;
+}
+
+#menu-btn #top-menu
+{
+	-webkit-transform: rotate(-25deg) translateY(3px) translateX(-8px) scaleX(0.8);
+	    -ms-transform: rotate(-25deg) translateY(3px) translateX(-8px) scaleX(0.8);
+	        transform: rotate(-25deg) translateY(3px) translateX(-8px) scaleX(0.8);
+	margin-top: 0;
+}
+
+#menu-btn #mid-menu
+{
+	-webkit-transform: none;
+	    -ms-transform: none;
+	        transform: none;
+}
+
+nav.closed #menu-btn #mid-menu, nav.closed #menu-btn #bot-menu, nav.closed #menu-btn #top-menu
+{
+	-webkit-transform: none;
+	    -ms-transform: none;
+	        transform: none;
+}
+
+#menu-stack
+{
+	-webkit-transition: -webkit-transform 0.4s ease;
+	transition: -webkit-transform 0.4s ease;
+	-o-transition: transform 0.4s ease;
+	transition: transform 0.4s ease;
+	transition: transform 0.4s ease, -webkit-transform 0.4s ease;
+	position: absolute;
+	bottom: 45px;
+	left: 45px;
+}
+
+nav.closed #menu-stack 
+{
+	-webkit-transform: rotate(180deg);
+	    -ms-transform: rotate(180deg);
+	        transform: rotate(180deg);
+}
+
+#logo
+{
+	width: 40px;
+	line-height: 0;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
+}
+
+#dark-mode
+{
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	pointer-events: none;
+	-webkit-backdrop-filter: invert(1) hue-rotate(180deg);
+	        backdrop-filter: invert(1) hue-rotate(180deg);
+	-webkit-transition: -webkit-transform 0.6s ease;
+	transition: -webkit-transform 0.6s ease;
+	-o-transition: transform 0.6s ease;
+	transition: transform 0.6s ease;
+	transition: transform 0.6s ease, -webkit-transform 0.6s ease;
+	-webkit-transform-origin: left;
+	    -ms-transform-origin: left;
+	        transform-origin: left;
+	-webkit-transform: scaleX(0);
+	    -ms-transform: scaleX(0);
+	        transform: scaleX(0);
+}
+
+img
+{
+	-webkit-transition: -webkit-filter 0.6s ease;
+	transition: -webkit-filter 0.6s ease;
+	-o-transition: filter 0.6s ease;
+	transition: filter 0.6s ease;
+	transition: filter 0.6s ease, -webkit-filter 0.6s ease;
+}
+
+.dark-mode img
+{
+	-webkit-filter: invert(1) hue-rotate(180deg);
+	        filter: invert(1) hue-rotate(180deg);
+}
+
+.dark-mode #logo
+{
+	-webkit-filter: none;
+	        filter: none;
+}
+
+.dark-mode #dark-mode
+{
+	-webkit-transform: scaleX(1);
+	    -ms-transform: scaleX(1);
+	        transform: scaleX(1);
+}
+
+section
+{
+	max-width: 700px;
+	margin: 150px auto;
+	position: relative;
+}
+
+h6
+{
+	text-transform: uppercase;
+	font-weight: normal;
+	font-size: 1rem;
+	margin: 0;
+}
+
+.circle
+{
+	background: #F0F0F0;
+	border-radius: 100%;
+	text-align: center;
+	width: 75px;
+	line-height: 75px;
+	border: 1px solid #000000;
+	margin-top: -5px;
+	float: left;
+	margin-left: -webkit-calc(45% - 95px);
+	margin-left: calc(45% - 95px);
+}
+
+h1, h3
+{
+	font-size: 3.85rem;
+	line-height: 1.8;
+	letter-spacing: 0;
+	font-family: "title", serif;
+	font-weight: normal;
+	margin: 0;
+}
+
+h3
+{
+	font-size: 1.7rem;
+	text-transform: uppercase;
+}
+
+.indent-01
+{
+	margin-left: 25%;
+}
+
+.indent-02
+{
+	margin-left: 45%;
+	margin-top: 21px;
+}
+
+#img-01
+{
+	width: 50%;
+	opacity: 0.6;
+	position: absolute;
+	z-index: -99;
+	left: 0;
+	top: 4.5rem;
+}
+
+#arrow-down-01
+{
+	position: absolute;
+	bottom: -50%;
+	display: block;
+	left: -webkit-calc(50% + 10px);
+	left: calc(50% + 10px);
+}
+
+#sect-02
+{
+	margin-top: 320px;
+}
