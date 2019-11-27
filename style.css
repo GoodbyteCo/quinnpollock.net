@@ -44,6 +44,18 @@ body
 	min-width: 700px;
 }
 
+::selection 
+{
+    background: #ff0000;
+    color: #000000;
+}
+
+::-moz-selection
+{
+	background: #ff0000;
+    color: #000000;
+}
+
 header
 {
 	margin: 0;
