@@ -509,9 +509,11 @@ article p
 	margin-top: 10px;
 }
 
+a 
+{
+	color: #ff0000;
+}
 
-a {
-	color: #ff0000
 @media screen and (max-width: 719px)
 {
 	body
