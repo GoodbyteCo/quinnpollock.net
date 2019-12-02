@@ -42,7 +42,6 @@ body
 {
 	background: #F0F0F0;
 	margin: 0;
-	min-width: 700px;
 }
 
 ::selection 
@@ -513,4 +512,93 @@ article p
 
 a {
 	color: #ff0000
+@media screen and (max-width: 719px)
+{
+	body
+	{
+		padding-top: 40px;
+	}
+	
+	nav
+	{
+		width: 100%;
+		max-height: 560px;
+		border-right: none;
+		border-bottom: 1px solid #000000;
+		padding: 20px;
+	}
+	
+	nav.closed
+	{
+		max-height: 80px;
+		width: 100%;
+	}
+	
+	header
+	{
+		margin-bottom: 40px;
+	}
+	
+	nav ul
+	{
+		text-align: right;
+		margin-left: 0px;
+		margin-right: 20px;
+	}
+	
+	nav a
+	{
+		display: inline;
+	}
+	
+	#menu-btn
+	{
+		top: 0;
+		right: 0;
+		left: auto;
+		bottom: auto;
+		height: 80px;
+		width: 140px;
+	}
+	
+	#menu-text
+	{
+	    line-height: 80px;
+    	float: left;
+		-webkit-transform: none;
+		-ms-transform: none;
+		transform: none;
+	}
+	
+	#menu-stack
+	{
+		bottom: auto;
+		left: auto;
+		right: 40px;
+		top: 28px;
+		-webkit-transform: rotate(90deg);
+		-ms-transform: rotate(90deg);
+		transform: rotate(90deg);
+	}
+	
+	nav.closed #menu-stack 
+	{
+		-webkit-transform: rotate(-180deg);
+		-ms-transform: rotate(-180deg);
+		transform: rotate(-180deg);
+	}
+	
+	#dark-mode-btn
+	{
+		margin: 40px 20px 0 0;
+    	display: block;
+    	float: right;
+	}
+	
+	article, section
+	{
+		-webkit-transform: none;
+		-ms-transform: none;
+		transform: none;
+	}
 }
