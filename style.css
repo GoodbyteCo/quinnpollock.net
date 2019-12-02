@@ -1,9 +1,9 @@
 @font-face
 {
     font-family: "title";
-    src: url('https://guinane.xyz/quinnpollock.net/font/webfont-1.woff2') format('woff2'),
-        url('https://guinane.xyz/quinnpollock.net/font/webfont-1.woff') format('woff'),
-        url('https://guinane.xyz/quinnpollock.net/font/webfont-1.ttf') format('truetype');
+    src: url('./font/webfont-1.woff2') format('woff2'),
+        url('./font/webfont-1.woff') format('woff'),
+        url('./font/webfont-1.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -11,9 +11,9 @@
 @font-face
 {
     font-family: "text";
-    src: url('https://guinane.xyz/quinnpollock.net/font/webfont-2.woff2') format('woff2'),
-        url('https://guinane.xyz/quinnpollock.net/font/webfont-2.woff') format('woff'),
-        url('https://guinane.xyz/quinnpollock.net/font/webfont-2.ttf') format('truetype');
+    src: url('./font/webfont-2.woff2') format('woff2'),
+        url('./font/webfont-2.woff') format('woff'),
+        url('./font/webfont-2.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -294,28 +294,31 @@ nav.closed #menu-stack
 	        user-select: none;
 }
 
-#dark-mode
+@supports(backdrop-filter: invert(1) hue-rotate(180deg)) or (-webkit-backdrop-filter: invert(1) hue-rotate(180deg))
 {
-	position: fixed;
-	width: 100vw;
-	height: 100vh;
-	top: 0;
-	left: 0;
-	z-index: 9999;
-	pointer-events: none;
-	-webkit-backdrop-filter: invert(1) hue-rotate(180deg);
-	        backdrop-filter: invert(1) hue-rotate(180deg);
-	-webkit-transition: -webkit-transform 0.6s ease;
-	transition: -webkit-transform 0.6s ease;
-	-o-transition: transform 0.6s ease;
-	transition: transform 0.6s ease;
-	transition: transform 0.6s ease, -webkit-transform 0.6s ease;
-	-webkit-transform-origin: left;
-	    -ms-transform-origin: left;
-	        transform-origin: left;
-	-webkit-transform: scaleX(0);
-	    -ms-transform: scaleX(0);
-	        transform: scaleX(0);
+	#dark-mode
+	{
+		position: fixed;
+		width: 100vw;
+		height: 100vh;
+		top: 0;
+		left: 0;
+		z-index: 9999;
+		pointer-events: none;
+		-webkit-backdrop-filter: invert(1) hue-rotate(180deg);
+				backdrop-filter: invert(1) hue-rotate(180deg);
+		-webkit-transition: -webkit-transform 0.6s ease;
+		transition: -webkit-transform 0.6s ease;
+		-o-transition: transform 0.6s ease;
+		transition: transform 0.6s ease;
+		transition: transform 0.6s ease, -webkit-transform 0.6s ease;
+		-webkit-transform-origin: left;
+			-ms-transform-origin: left;
+				transform-origin: left;
+		-webkit-transform: scaleX(0);
+			-ms-transform: scaleX(0);
+				transform: scaleX(0);
+	}
 }
 
 img
@@ -327,23 +330,26 @@ img
 	transition: filter 0.6s ease, -webkit-filter 0.6s ease;
 }
 
-.dark-mode img
+@supports(backdrop-filter: invert(1) hue-rotate(180deg)) or (-webkit-backdrop-filter: invert(1) hue-rotate(180deg))
 {
-	-webkit-filter: invert(1) hue-rotate(180deg);
-	        filter: invert(1) hue-rotate(180deg);
-}
+	.dark-mode img
+	{
+		-webkit-filter: invert(1) hue-rotate(180deg);
+				filter: invert(1) hue-rotate(180deg);
+	}
 
-.dark-mode #logo
-{
-	-webkit-filter: none;
-	        filter: none;
-}
+	.dark-mode #logo
+	{
+		-webkit-filter: none;
+				filter: none;
+	}
 
-.dark-mode #dark-mode
-{
-	-webkit-transform: scaleX(1);
-	    -ms-transform: scaleX(1);
-	        transform: scaleX(1);
+	.dark-mode #dark-mode
+	{
+		-webkit-transform: scaleX(1);
+			-ms-transform: scaleX(1);
+				transform: scaleX(1);
+	}
 }
 
 section
