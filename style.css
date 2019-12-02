@@ -454,6 +454,7 @@ h3
 article
 {
 	text-align: center;
+	width: calc(100% - 140px);
 	max-width: 740px;
 	padding: 20px;
 	margin: auto;
@@ -467,6 +468,12 @@ article
 article p
 {
 	text-transform: uppercase;
+}
+
+article h1
+{
+	line-height: 1.2;
+	margin-bottom: 2rem;
 }
 
 .podcast-player 
@@ -602,5 +609,34 @@ a
 		-webkit-transform: none;
 		-ms-transform: none;
 		transform: none;
+		width: 100%;
+		box-sizing: border-box;
+	}
+	
+	.podcast-player 
+	{
+		padding: 10px;
+		border-radius: 20px;
+		grid-template-columns: 100px auto;
+		grid-template-rows: auto 40px;
+		grid-gap: 10px;
+	}
+	
+	.podcast-player h1 
+	{
+    	font-size: 2rem;
+	}
+	
+	.podcast-player img 
+	{
+    	grid-row-end: 2;
+	}
+	
+	.podcast-player audio 
+	{
+		grid-row-start: 2;
+    	grid-row-end: 3;
+    	grid-column-start: 1;
+    	grid-column-end: 3;
 	}
 }
