@@ -52,5 +52,6 @@ function changeMode()
         lightMode(btn)
     }
 }
-
-window.onload = defaultMode
+window.addEventListener('DOMContentLoaded', (event) => {
+    defaultMode();
+});
