@@ -20,7 +20,7 @@
 
 html
 {
-	background: #F0F0F0;
+/*	background: #F0F0F0;*/
 	font-size: 12px;
 	line-height: 1.4;
 	color: #000000;
@@ -40,6 +40,7 @@ html
 
 body
 {
+	background: #F0F0F0;
 	margin: 0;
 	min-width: 700px;
 }
@@ -54,6 +55,17 @@ body
 {
 	background: #ff0000;
     color: #000000;
+}
+
+#background
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: -99;
+	background: #F0F0F0;
 }
 
 header
@@ -296,6 +308,11 @@ nav.closed #menu-stack
 
 @supports(backdrop-filter: invert(1) hue-rotate(180deg)) or (-webkit-backdrop-filter: invert(1) hue-rotate(180deg))
 {
+	body.dark-mode
+	{
+		background: #0f0f0f;
+	}
+	
 	#dark-mode
 	{
 		position: fixed;
