@@ -19,7 +19,7 @@ function defaultMode() {
         var btn = document.getElementById("dark-mode-btn");
         btn.innerHTML = "" 
     } else {
-        if(isDarkMode) {
+		if(((sessionStorage.getItem("dark-mode") === null) && (isDarkMode)) || (sessionStorage.getItem("dark-mode") == 1)) {
             var btn = document.getElementById("dark-mode-btn");
             darkMode(btn)
         }
@@ -29,21 +29,23 @@ function defaultMode() {
 window.matchMedia("(prefers-color-scheme: dark)").addListener(e => {
     var btn = document.getElementById("dark-mode-btn");
     e.matches && darkMode(btn)
-    });
+});
 
 window.matchMedia("(prefers-color-scheme: light)").addListener(e => {
     var btn = document.getElementById("dark-mode-btn"); 
-        e.matches && lightMode(btn)
-    });
+    e.matches && lightMode(btn)
+});
 
 function changeMode() {
     document.getElementById("nav").classList.toggle("closed");
     var btn = document.getElementById("dark-mode-btn");
     
     if(btn.innerHTML == "dark mode: off") {
-        darkMode(btn)
+        darkMode(btn);
+		sessionStorage.setItem("dark-mode", 1);
     } else {
-        lightMode(btn)
+        lightMode(btn);
+		sessionStorage.setItem("dark-mode", 0);
     }
 }
 
