@@ -688,6 +688,7 @@ a
 		z-index: -99;
 		left: calc(50% - 130px);
 		top: -60px;
+		transform: translateZ(0px);
 	}
 	
 	#arrow-down-01 
