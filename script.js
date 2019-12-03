@@ -19,7 +19,7 @@ function defaultMode() {
         var btn = document.getElementById("dark-mode-btn");
         btn.innerHTML = "" 
     } else {
-		if(((sessionStorage.getItem("dark-mode") === null) && (isDarkMode)) || (sessionStorage.getItem("dark-mode") == 1)) {
+		if(((localStorage.getItem("dark-mode") === null) && (isDarkMode)) || (localStorage.getItem("dark-mode") == 1)) {
             var btn = document.getElementById("dark-mode-btn");
             darkMode(btn)
         }
@@ -42,10 +42,10 @@ function changeMode() {
     
     if(btn.innerHTML == "dark mode: off") {
         darkMode(btn);
-		sessionStorage.setItem("dark-mode", 1);
+		localStorage.setItem("dark-mode", 1);
     } else {
         lightMode(btn);
-		sessionStorage.setItem("dark-mode", 0);
+		localStorage.setItem("dark-mode", 0);
     }
 }
 
