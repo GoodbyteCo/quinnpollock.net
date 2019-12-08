@@ -1,0 +1,19 @@
+---
+title: Main Page
+layout: default
+---
+
+<section id="hero-section">
+    <h6 class="indent-01">Hello, World</h6>
+    <h1 class="indent-01">I'm Quinn Pollock</h1>
+    <h6 class="circle">I'm a</h6>
+    <h3 class="indent-02">
+        Podcast enthusiast,
+        <br>Pen &amp; Paper aficionado,
+        <br>ttRPG nerd,
+        <br>and Musical Obsessed
+        <br>Computer science student at queen’s university
+    </h3>
+    <img id="img-01" src="/assets/images/quinn.jpg" alt="Quinn Pollock standing in a lavender patch">
+    <svg id="arrow-down-01" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 21.883l-6.235-7.527-.765.644 7.521 9 7.479-9-.764-.645-6.236 7.529v-21.884h-1v21.883z"/></svg>
+</section>
