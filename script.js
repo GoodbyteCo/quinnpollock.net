@@ -6,13 +6,13 @@ const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified;
 function darkMode(btn, meta) {
     btn.innerHTML = "dark mode: on";
     document.body.className = "dark-mode";
-    meta.setAttribute("content", "#000000");	
+    meta.setAttribute("content" ,"#000000");	
 }
 
 function lightMode(btn, mata) {
     btn.innerHTML = "dark mode: off";
     document.body.className = "";
-    meta.setAttribute("content", "#ffffff");
+    meta.setAttribute("content" ,"#ffffff");
 }
 
 function defaultMode() {
