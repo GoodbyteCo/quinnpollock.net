@@ -6,13 +6,13 @@ const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified;
 function darkMode(btn, meta) {
     btn.innerHTML = "dark mode: on";
     document.body.className = "dark-mode";
-    meta.setAttribute("content", "#000000");	
+    meta.setAttribute("content" ,"#000000");	
 }
 
-function lightMode(btn, mata) {
+function lightMode(btn, meta) {
     btn.innerHTML = "dark mode: off";
     document.body.className = "";
-    meta.setAttribute("content", "#ffffff");
+    meta.setAttribute("content" ,"#ffffff");
 }
 
 function defaultMode() {
@@ -43,14 +43,15 @@ window.matchMedia("(prefers-color-scheme: light)").addListener(e => {
 });
 
 function changeMode() {
+    var metaThemeColor = document.querySelector("meta[name=theme-color]");
     document.getElementById("nav").classList.toggle("closed");
     var btn = document.getElementById("dark-mode-btn");
     
     if(btn.innerHTML == "dark mode: off") {
-        darkMode(btn);
+        darkMode(btn, metaThemeColor);
 		localStorage.setItem("dark-mode", 1);
     } else {
-        lightMode(btn);
+        lightMode(btn, metaThemeColor);
 		localStorage.setItem("dark-mode", 0);
     }
 }
