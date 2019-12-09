@@ -3,14 +3,16 @@ const isLightMode = window.matchMedia("(prefers-color-scheme: light)").matches;
 const isNotSpecified = window.matchMedia("(prefers-color-scheme: no-preference)").matches;
 const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified;
 
-function darkMode(btn) {
+function darkMode(btn, meta) {
     btn.innerHTML = "dark mode: on";
-    document.body.className = "dark-mode";	
+    document.body.className = "dark-mode";
+    meta.setAttribute("content", "#000000");	
 }
 
-function lightMode(btn) {
+function lightMode(btn, mata) {
     btn.innerHTML = "dark mode: off";
     document.body.className = "";
+    meta.setAttribute("content", "#ffffff");
 }
 
 function defaultMode() {
@@ -20,20 +22,24 @@ function defaultMode() {
         btn.innerHTML = "" 
     } else {
 		if(((localStorage.getItem("dark-mode") === null) && (isDarkMode)) || (localStorage.getItem("dark-mode") == 1)) {
+            var metaThemeColor = document.querySelector("meta[name=theme-color]");
             var btn = document.getElementById("dark-mode-btn");
-            darkMode(btn)
+            darkMode(btn, metaThemeColor);
         }
     }
 }
 
 window.matchMedia("(prefers-color-scheme: dark)").addListener(e => {
+    var metaThemeColor = document.querySelector("meta[name=theme-color]");
     var btn = document.getElementById("dark-mode-btn");
-    e.matches && darkMode(btn)
+    
+    e.matches && darkMode(btn, metaThemeColor)
 });
 
 window.matchMedia("(prefers-color-scheme: light)").addListener(e => {
+    var metaThemeColor = document.querySelector("meta[name=theme-color]");
     var btn = document.getElementById("dark-mode-btn"); 
-    e.matches && lightMode(btn)
+    e.matches && lightMode(btn, metaThemeColor);
 });
 
 function changeMode() {
