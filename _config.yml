@@ -3,3 +3,7 @@ name: Quinn Pollock
 description: Quinn Pollock
 
 url: "https://quinnpollock.net"
+
+permalink: /:title/
+
+baseurl:
