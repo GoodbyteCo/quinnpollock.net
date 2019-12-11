@@ -357,6 +357,36 @@ img
 	transition: filter 0.6s ease, -webkit-filter 0.6s ease;
 }
 
+.blogpost {
+	cursor: pointer;
+	max-width: 700px;
+	height: 140px;
+	overflow: hidden;
+	text-align: left;
+	background: #e1e1e1;
+	padding: 20px;
+	border-radius: 30px;
+	margin:25px auto;
+	transition: all 0.15s linear;
+}
+
+.blogpost:hover, .blogpost:focus {
+	transform: translateY(-5px);
+	outline: none
+}
+
+.blogpost p {
+	height: 6.2rem;
+	overflow: hidden;
+	font-family: "body";
+	font-size: 1.1rem;
+	text-transform: none;
+}
+
+.date{
+	opacity: 0.7;
+}
+
 @supports(backdrop-filter: invert(1) hue-rotate(180deg)) or (-webkit-backdrop-filter: invert(1) hue-rotate(180deg))
 {
 	.dark-mode img
@@ -550,7 +580,7 @@ a
 	nav
 	{
 		width: 100%;
-		max-height: 560px;
+		max-height: 630px;
 		border-right: none;
 		border-bottom: 1px solid #000000;
 		padding: 20px;
