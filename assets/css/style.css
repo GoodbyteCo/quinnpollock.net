@@ -18,6 +18,17 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'body';
+    src: url('/assets/font/webfont-3.woff2') format('woff2'),
+        url('/assets/font/webfont-3.woff') format('woff'),
+        url('/assets/font/webfont-3.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
 html
 {
 /*	background: #F0F0F0;*/
