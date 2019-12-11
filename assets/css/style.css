@@ -387,6 +387,10 @@ img
 	opacity: 0.7;
 }
 
+.blog-post p {
+	text-transform: none;
+	font-family: "body";
+}
 @supports(backdrop-filter: invert(1) hue-rotate(180deg)) or (-webkit-backdrop-filter: invert(1) hue-rotate(180deg))
 {
 	.dark-mode img
