@@ -19,7 +19,7 @@
 }
 
 @font-face {
-    font-family: 'body';
+    font-family: "body";
     src: url('/assets/font/webfont-3.woff2') format('woff2'),
         url('/assets/font/webfont-3.woff') format('woff'),
         url('/assets/font/webfont-3.ttf') format('truetype');
@@ -316,6 +316,8 @@ nav.closed #menu-stack
 	        user-select: none;
 }
 
+
+
 @supports(backdrop-filter: invert(1) hue-rotate(180deg)) or (-webkit-backdrop-filter: invert(1) hue-rotate(180deg))
 {
 	body.dark-mode
@@ -527,6 +529,25 @@ article h1
 {
 	line-height: 1.2;
 	margin-bottom: 2rem;
+}
+
+.ideas {
+	font-size: 1.3rem;
+}
+
+.ideas h4
+{
+	margin-top: 3rem
+}
+
+.ideas p 
+{
+	text-transform: unset;
+}
+
+.ideas ul {
+	text-align: left;
+	font-size: 1.2rem;
 }
 
 .podcast-player 
