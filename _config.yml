@@ -4,6 +4,6 @@ description: Quinn Pollock
 
 url: "https://quinnpollock.net"
 
-permalink: /:title/
+permalink: /:categories/:title/
 
 baseurl:
