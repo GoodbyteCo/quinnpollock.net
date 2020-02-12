@@ -8,5 +8,6 @@ permalink: /:categories/:title/
 
 plugins:
   - jekyll-sitemap
+  - jekyll-seo-tag
 
 baseurl:
