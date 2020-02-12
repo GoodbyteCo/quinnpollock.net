@@ -6,4 +6,7 @@ url: "https://quinnpollock.net"
 
 permalink: /:categories/:title/
 
+plugins:
+  - jekyll-sitemap
+
 baseurl:
