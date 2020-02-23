@@ -1,7 +1,7 @@
 ---
 title: Wet’suwet’en Solidarity and Support
 layout: ideas
-short: information and list of email forms to send in support of Wet’suwet’en
+short: Information and list of emails to send support for Wet’suwet’en
 ---
 
 Now is the time the support the Wet’suwet’en people agaist colonial violence and militarized RCMP invasion. Below is a list of contacts and talking points that can be used to contact local media, Queen's Univesity and Kingston Government Officals in order to make your voice heard
