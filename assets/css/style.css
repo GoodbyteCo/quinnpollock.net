@@ -540,6 +540,16 @@ article h1
 	margin-top: 3rem
 }
 
+.ideas h3
+{
+	margin-top: 2rem;
+	text-transform: unset;
+}
+
+.ideas h2 {
+	margin-top: 3rem;
+}
+
 .ideas p 
 {
 	text-transform: unset;
@@ -548,6 +558,12 @@ article h1
 .ideas ul {
 	text-align: left;
 	font-size: 1.2rem;
+}
+
+.letter
+{
+	font-family: body;
+	text-align: left;
 }
 
 .podcast-player 
