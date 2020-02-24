@@ -1,6 +1,7 @@
 ---
 title: Wet’suwet’en Solidarity and Support
 layout: ideas
+author: Sam, Quinn
 short: Information and list of emails to send support for Wet’suwet’en
 ---
 
