@@ -576,6 +576,16 @@ article h1
 	text-align: left;
 }
 
+.blogimage img {
+	width: 90%;
+}
+
+.blogimage figcaption {
+	margin-top: 0.3rem;
+	font-size: 0.9rem;
+	font-style: italic;
+}
+
 .podcast-player 
 {
 	background: #e1e1e1;
@@ -608,12 +618,14 @@ article h1
 	height: 100%;
 }
 
-.podcast-player h1 
+.podcast-player h2 
 {
 	font-size: 2.5rem;
 	line-height: 1.2;
 	margin-bottom: 1rem;
 	margin-top: 10px;
+	font-family: title,serif;
+	font-weight: 400;
 }
 
 a 
@@ -724,7 +736,7 @@ a
 		margin-top: 40px;
 	}
 	
-	.podcast-player h1 
+	.podcast-player h2 
 	{
     	font-size: 2rem;
 	}
