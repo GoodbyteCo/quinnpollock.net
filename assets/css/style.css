@@ -499,7 +499,7 @@ h3
 #arrow-down-01
 {
 	position: absolute;
-	bottom: -50%;
+	bottom: -45%;
 	display: block;
 	left: -webkit-calc(50% + 10px);
 	left: calc(50% + 10px);
