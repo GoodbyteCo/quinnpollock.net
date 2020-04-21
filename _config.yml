@@ -14,3 +14,7 @@ baseurl:
 
 include:
   - _redirects
+
+twitter:
+  username: holopollock
+  card: summary
