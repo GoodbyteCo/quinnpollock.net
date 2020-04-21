@@ -200,6 +200,11 @@ nav ul
 	transition: all 0.25s ease-out 0.15s;
 }
 
+.strike {
+	text-decoration: line-through;
+}
+
+
 nav.closed
 {
 	width: 120px;
@@ -541,6 +546,45 @@ article h1
 	margin-bottom: 2rem;
 }
 
+article .text {
+	text-align: left;
+	/* font-family: body; */
+}
+
+.footnotes {
+	text-align: left;
+	padding-top: 3rem;
+	
+}
+.footnotes::before {
+	display: block;
+	content: "";
+    border-top: 1.85px solid black;
+    width: 10rem;
+}
+
+blockquote {
+	border-left: 1.95px solid #ccc;
+	margin: 0 0.5rem;
+	padding: 0.5em 10px;
+	quotes: "\201C""\201D""\2018""\2019";
+	color: #5e5e5e;
+	text-align: left;
+	vertical-align: baseline;
+  }
+  blockquote::before {
+	color: #ccc;
+	content: "❝";
+	font-size: 4em;
+	line-height: 0.1em;
+	margin-right: 0.25em;
+	vertical-align: -0.4em;
+  }
+  blockquote p {
+	display: inline;
+	padding-left: 1.5rem;
+  }
+
 .ideas {
 	font-size: 1.3rem;
 }
@@ -725,7 +769,17 @@ a
 		padding: 0 20px;
 		box-sizing: border-box;
 	}
-	
+	blockquote::before {
+		color: #ccc;
+		content: "❝";
+		font-size: 4em;
+		line-height: 0.5em;
+		margin-right: 0;
+		display: block;
+	}
+	blockquote p{
+		padding-left: 0;
+	}
 	.podcast-player 
 	{
 		padding: 10px;
