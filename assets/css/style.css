@@ -607,6 +607,10 @@ blockquote {
 .ideas p 
 {
 	text-transform: unset;
+	font-size: 1.1rem;
+        line-height: 1.8;
+        letter-spacing: 0;
+        margin-bottom: 2.4rem;
 }
 
 .ideas ul {
