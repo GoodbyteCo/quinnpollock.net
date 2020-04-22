@@ -14,3 +14,4 @@ baseurl:
 
 include:
   - _redirects
+  - netlify.toml
