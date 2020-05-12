@@ -504,7 +504,7 @@ h3
 #arrow-down-01
 {
 	position: absolute;
-	bottom: -45%;
+	bottom: 25%;
 	display: block;
 	left: -webkit-calc(50% + 10px);
 	left: calc(50% + 10px);
@@ -518,11 +518,29 @@ h3
 #hero-section
 {
 	text-shadow: 0 0 20px #f0f0f0;
+	min-height: 70vh;
+}
+
+#posts-section
+{
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.post-section h3
+{
+	font-size: 1.9rem;
+	text-align: center;
 }
 
 #notfound {
 	text-align: center;
 	padding: 12rem;
+}
+
+.list-posts li
+{
+	margin-bottom: 1em;
 }
 
 article
@@ -576,6 +594,7 @@ blockquote {
 	color: #5e5e5e;
 	text-align: left;
 	vertical-align: baseline;
+	margin-bottom: 1.75rem;
   }
   blockquote::before {
 	color: #ccc;
@@ -861,6 +880,13 @@ a
 	
 	#arrow-down-01 
 	{
-		display: none;
+		position: relative;
+		left:45%;
+		padding-top: 10px;
+	}
+
+	.post-section h3 
+	{
+		font-size: 1.5rem;
 	}
 }
