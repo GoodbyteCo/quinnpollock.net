@@ -642,6 +642,28 @@ blockquote {
 	font-size: 1.2rem;
 }
 
+#rss h3 
+{
+	text-transform: unset;	
+}
+
+#rss p 
+{
+	text-transform: unset;
+	font-size: 1.1rem;
+	line-height: 1.8;
+    letter-spacing: 0;
+}
+
+#rss ul 
+{
+	font-size: 1.2rem;
+	list-style: none;
+	text-align: center;
+	padding-left: 0;
+
+}
+
 .letter
 {
 	font-family: body;
