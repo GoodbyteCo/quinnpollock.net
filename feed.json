@@ -9,7 +9,7 @@ layout: null
     "feed_url": "{{ "/feed.json" | absolute_url }}",
     "author": {
         "name" : {{site.name | jsonify}},
-        "url" : {{ site.twitter | jsonify }}
+        "url" : {{ site.twitterurl | jsonify }}
     },
     "icon": "https://quinnpollock.net/assets/images/apple_touch_logo.png",
     "favicon" : "https://quinnpollock.net/assets/images/favicon-32x32.png",
