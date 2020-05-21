@@ -1,0 +1,29 @@
+---
+layout: null
+---
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "{{ site.title | xml_escape }}",
+    "description": {{ site.description | jsonify }},
+    "home_page_url": "{{ "/" | absolute_url }}",
+    "feed_url": "{{ "/feed.json" | absolute_url }}",
+    "author": {
+        "name" : {{site.name | jsonify}},
+        "url" : {{ site.twitter | jsonify }}
+    },
+    "icon": "https://quinnpollock.net/assets/images/apple_touch_logo.png",
+    "favicon" : "https://quinnpollock.net/assets/images/favicon-32x32.png",
+    "user_comment": "This feed allows you to read the posts from this site in any feed reader that supports the JSON Feed format.",
+    "items": [{% for post in site.posts limit:10 %}
+        {
+            "id": "{{ post.url | absolute_url }}",
+            "url": "{{ post.url | absolute_url }}",
+            "title": {{ post.title | jsonify }},
+            "author": {
+                "name": {{ post.author | jsonify }}
+            },
+            "content_html": {{ post.content | jsonify }},
+            "date_published": "{{ post.date | date_to_xmlschema }}"
+        }{% unless forloop.last %},{% endunless %}{% endfor %}
+    ]
+}

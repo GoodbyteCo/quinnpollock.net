@@ -1,14 +1,19 @@
 name: Quinn Pollock
 
-description: Quinn Pollock
+twitter: https://twitter.com/holopollock
+
+description: Quinn Pollock's Site to talk about my thoughtsk
 
 url: "https://quinnpollock.net"
+
+title: Quinn Pollock's Site 
 
 permalink: /:categories/:title/
 
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-feed
 
 baseurl:
 
