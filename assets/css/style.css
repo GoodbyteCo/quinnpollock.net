@@ -642,6 +642,19 @@ blockquote {
 	font-size: 1.2rem;
 }
 
+#article-footer
+{
+	text-align: center;
+	width: calc(100% - 140px);
+	max-width: 740px;
+	padding: 20px;
+	margin: auto;
+	margin-bottom: 2em;
+	-webkit-transform: translateX(60px);
+	-ms-transform: translateX(60px);
+	transform: translateX(60px);
+}
+
 #rss h3 
 {
 	text-transform: unset;	
@@ -819,6 +832,16 @@ a
 		padding: 0 20px;
 		box-sizing: border-box;
 	}
+
+	#article-footer
+	{
+		width: 100%;
+		padding: 0 20px;
+		-webkit-transform: none;
+		-ms-transform: none;
+		transform: none;
+	}
+
 	blockquote::before {
 		color: #ccc;
 		content: "❝";
