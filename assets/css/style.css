@@ -644,15 +644,17 @@ blockquote {
 
 #article-footer
 {
+	position: absolute;
+	bottom: 0;
 	text-align: center;
 	width: calc(100% - 140px);
-	max-width: 740px;
+	width: -webkit-calc(100% - 140px);
 	padding: 20px;
 	margin: auto;
 	margin-bottom: 2em;
-	-webkit-transform: translateX(60px);
-	-ms-transform: translateX(60px);
-	transform: translateX(60px);
+	-webkit-transform: translateX(110px);
+	-ms-transform: translateX(110px);
+	transform: translateX(110px);
 }
 
 #rss h3 
@@ -835,7 +837,7 @@ a
 
 	#article-footer
 	{
-		width: 100%;
+		width: 90%;
 		padding: 0 20px;
 		-webkit-transform: none;
 		-ms-transform: none;
