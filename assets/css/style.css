@@ -648,9 +648,9 @@ blockquote {
 	text-align: left;
 }
 
-.blogimage img {
-	width: 90%;
-}
+/* .blogimage img { */
+	/* width: 90%; */
+/* } */
 
 .blogimage figcaption {
 	margin-top: 0.3rem;

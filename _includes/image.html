@@ -1,4 +1,9 @@
+{% assign width = include.width | default: "90%" %}
 <figure class="blogimage">
-    <img src="{{ include.url }}" alt="{{ include.description }}">
+    <picture>
+        <source srcset='{{ include.url }}.webp' type='image/webp'>
+        <source srcset='{{ include.url }}.jp2' type='image/jp2'>
+        <img src="{{ include.url }}.jpg" alt="{{ include.description }}" style="width:{{ width }}; height: auto;">
+    </picture>
     <figcaption>{{ include.description }}</figcaption>
 </figure>
