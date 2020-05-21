@@ -18,7 +18,7 @@ layout: null
         {
             "id": "{{ post.url | absolute_url }}",
             "url": "{{ post.url | absolute_url }}",
-            "title": {{ post.title | strip_html | jsonify }},
+            "title": {{ post.title | jsonify }},
             "author": {
                 "name": {{ post.author | jsonify }}
             },
