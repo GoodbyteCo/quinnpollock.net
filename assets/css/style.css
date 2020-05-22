@@ -644,17 +644,16 @@ blockquote {
 
 #article-footer
 {
-	position: absolute;
-	bottom: 0;
 	text-align: center;
 	width: calc(100% - 140px);
 	width: -webkit-calc(100% - 140px);
-	padding: 20px;
+	height: 50px;
+	padding-top: 20px;
 	margin: auto;
 	margin-bottom: 2em;
-	-webkit-transform: translateX(110px);
-	-ms-transform: translateX(110px);
-	transform: translateX(110px);
+	-webkit-transform: translateX(60px);
+	-ms-transform: translateX(60px);
+	transform: translateX(60px);
 }
 
 #rss h3 
