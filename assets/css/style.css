@@ -656,6 +656,12 @@ blockquote {
 	transform: translateX(60px);
 }
 
+#idea-container
+{
+	min-height: calc(75vh - 15px);
+	min-height: -webkit-calc(75vh - 15px);
+}
+
 #rss h3 
 {
 	text-transform: unset;	
