@@ -690,6 +690,26 @@ blockquote {
 	text-align: left;
 }
 
+.image-grid-2
+{
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+	grid-column-gap: 1rem;
+}
+
+.image-grid-3
+{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(175px,1fr));
+	grid-column-gap: 1rem;
+}
+
+
+.grid-image
+{
+	margin: 0;
+}
+
 /* .blogimage img { */
 	/* width: 90%; */
 /* } */
@@ -940,5 +960,22 @@ a
 	.post-section h3 
 	{
 		font-size: 1.5rem;
+	}
+
+	.image-grid-3
+	{
+		display: grid;
+		grid-template-columns: repeat(4,1fr);
+		grid-column-gap: 1rem;
+		grid-row-gap: 0.8rem;
+	}
+
+	.grid-image
+	{
+		grid-column: span 2;
+	}
+
+	.grid-image:last-child:nth-child(2n - 1) {
+		grid-column-end: 4;
 	}
 }
