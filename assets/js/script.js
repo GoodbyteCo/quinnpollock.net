@@ -2,6 +2,7 @@ const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
 const isLightMode = window.matchMedia("(prefers-color-scheme: light)").matches;
 const isNotSpecified = window.matchMedia("(prefers-color-scheme: no-preference)").matches;
 const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified;
+let menu;
 
 function darkMode(btn, meta) {
     btn.innerHTML = "dark mode: on";
@@ -58,4 +59,19 @@ function changeMode() {
 
 window.addEventListener('DOMContentLoaded', (event) => {
     defaultMode();
+    menu = document.getElementById("menu-btn");
+
 });
+
+window.addEventListener("keyup", (event) => {
+    if (event.keyCode == 13) {
+        console.log("button")
+        console.log(document.activeElement)
+        console.log(menu)
+        if (document.activeElement == menu) {
+            menu.click()
+
+        }
+    }
+
+})
