@@ -5,7 +5,7 @@ author: Quinn Pollock
 short:  A quick review of the Baron Fig Slimline backpack
 description: A quick review of the Baron Fig Slimline backpack
 image: 
-    thumb: /assets/images/baronFigCard.jpg
+    thumb: /assets/images/baronFigCard.jpeg
 ---
 
  {:.text}
