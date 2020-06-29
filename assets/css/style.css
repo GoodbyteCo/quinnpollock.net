@@ -111,6 +111,7 @@ nav
 	top: 0;
 	left: 0;
 	z-index: 999;
+	overflow: scroll;
 }
 
 nav a
