@@ -5,7 +5,7 @@ author: Quinn Pollock
 short:  A retrospective of the facebook watch original <span class=strike>Limetown</span>
 description: A retrospective of the facebook watch original Limetown
 image:
-    thumb: /assets/images/LimetownRetro.jpg
+    thumb: assets/images/LimetownRetro.jpg
 ---
 {:.text}
 So around a year and a half ago, I needed something to fill my time. After some bumbling around the internet, I found the well-regarded podcast Limetown, so I listened to it and loved it. So when I heard it was being made a TV, I was excited. However, this excitement came with worry as the show was being released on Facebook Watch. To my knowledge, this was the first full production TV show being published by Facebook, a company not well known for its "Original Content." When the show came out, I didn't watch it, and I kinda forgot about it. Flash forward to now, if you look at the date you may know its the time of quarantine and social distancing so once again I was saddled with nothing to do, so I decided to watch the TV Show.
