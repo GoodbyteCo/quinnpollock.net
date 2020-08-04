@@ -5,7 +5,7 @@ author: Quinn Pollock
 short: My thoughts on the book loveless by Alice Oseman
 description: My thoughts on the books loveless by Alice Oseman
 image: 
-    thumb: /assets/images/LovelessCard.jpeg
+    thumb: assets/images/LovelessCard.jpeg
 ---
 
 {:.text}
