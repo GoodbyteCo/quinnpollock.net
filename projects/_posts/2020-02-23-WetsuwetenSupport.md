@@ -55,7 +55,7 @@ Email Kingston Mayor and City Council [here][1]
 
 Email Queen's University Admin [here][2]
 
-Email Queen's University Student Goverment [here][3]
+Email Queen's University Student Government [here][3]
 
 Email the Kingston Police [here](mailto:chief@kingstonpolice.ca)
 
@@ -63,7 +63,7 @@ Email Mark Gerretson MP of Kingston and The Island [here](mailto:mark.gerretsen@
 
 ## Letters to the Editor
 
-Send a letter to the Queen's Jounral [here](mailto:journal_editors@ams.queensu.ca?subject=Letter%20to%20the%20editors)
+Send a letter to the Queen's Journal [here](mailto:journal_editors@ams.queensu.ca?subject=Letter%20to%20the%20editors)
 
 Send a letter to the Kingston Whig [here](mailto:whig.local@sunmedia.ca?subject=Letter%20to%20the%20editors)
 
