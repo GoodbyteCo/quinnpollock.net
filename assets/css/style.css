@@ -144,6 +144,28 @@ nav ul > li > a:hover
 	opacity: 1;
 }
 
+nav ul:focus > li > a
+{
+	opacity: 0.4;
+}
+
+nav ul > li > a:focus
+{
+	opacity: 1;
+}
+nav ul:focus-within > li > a
+{
+	opacity: 0.4;
+}
+
+nav ul > li > a:focus-within
+{
+	opacity: 1;
+}
+
+
+
+
 nav ul
 {
 	list-style: none;
@@ -415,6 +437,12 @@ img
 	{
 		-webkit-filter: invert(1) hue-rotate(180deg);
 				filter: invert(1) hue-rotate(180deg);
+	}
+
+	.dark-mode .allow-dark img{
+		-webkit-filter: invert(0);
+				filter: invert(0);
+		
 	}
 
 	.dark-mode #logo
@@ -733,6 +761,11 @@ blockquote {
 	max-width: 700px;
 	text-align: left;
 	margin-top: 80px;
+}
+
+article .podcast-player
+{
+	margin-top: 10px;
 }
 
 .podcast-player img 
