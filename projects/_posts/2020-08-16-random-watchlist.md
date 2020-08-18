@@ -17,4 +17,4 @@ Well luckily I got the solution for you. Introducing [Random Watchlist Picker][1
 {:.text}
 Try it [now][1]
 
-[1]: https://watchlist-picker.vercel.app/
+[1]: https://watchlistpicker.com/
