@@ -4,7 +4,8 @@ title:  Folks & Fables
 author: Quinn Pollock
 short:  My new actual play D&D podcast
 description: My new actual play D&D podcast
-image:
+image: assets/images/folkfable.jpg 
+img:
     thumb: assets/images/folkfable.jpg
 ---
 

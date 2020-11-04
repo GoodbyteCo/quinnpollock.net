@@ -4,7 +4,8 @@ title:  Git Cooking
 author: Quinn Pollock
 short:  A Fun and Collaborative Recipe Site
 description: A Fun and collaborative Recipe Site
-image:
+image: assets/images/GitCooking.jpg
+img: 
     thumb: assets/images/GitCooking.jpg
 ---
 

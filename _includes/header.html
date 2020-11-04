@@ -27,14 +27,11 @@
 	{% else %}
 	<meta name="twitter:description" content="Quinn Pollock's Site">
 	{% endif %}
-	{% if page.image.thumb %}
-	<meta name="twitter:image" content="{{ site.url }}/{{ page.image.thumb }}">
+	{% if page.img.thumb %}
+	<meta name="twitter:image" content="{{ site.url }}/{{ page.img.thumb }}">
 	{% else %}
 	<meta name="twitter:image" content="{{ site.url }}/assets/images/twittercard.jpg">
 	{% endif %}
-	{% capture seo %}
 	{% seo %}
-	{% endcapture %}
-	{{ seo | replace: "summary_large_image", "summary" }}
 
 </head>

@@ -4,7 +4,8 @@ title: Loveless Loveletter
 author: Quinn Pollock
 short: My thoughts on the book loveless by Alice Oseman
 description: My thoughts on the books loveless by Alice Oseman
-image: 
+image: assets/images/LovelessCard.jpeg 
+img:
     thumb: assets/images/LovelessCard.jpeg
 ---
 

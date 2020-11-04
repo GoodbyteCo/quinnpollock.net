@@ -4,7 +4,8 @@ title:  <span class=strike>Limetown</span> Retrospective
 author: Quinn Pollock
 short:  A retrospective of the facebook watch original <span class=strike>Limetown</span>
 description: A retrospective of the facebook watch original Limetown
-image:
+image: assets/images/LimetownRetro.jpg
+img:
     thumb: assets/images/LimetownRetro.jpg
 ---
 {:.text}

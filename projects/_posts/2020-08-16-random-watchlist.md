@@ -4,7 +4,8 @@ title:  Random Watchlist Picker
 author: Quinn Pollock
 short:  A site for when you don't know what to watch 
 description: A site for when you don't know what to watch 
-image:
+image: assets/images/LetterboxdCard.jpeg
+img:
     thumb: assets/images/LetterboxdCard.jpeg
 ---
 
