@@ -32,5 +32,9 @@
 	{% else %}
 	<meta name="twitter:image" content="{{ site.url }}/assets/images/twittercard.jpg">
 	{% endif %}
+	{% capture seo %}
 	{% seo %}
+	{% endcapture %}
+	{{ seo | replace: "summary_large_image", "summary" }}
+
 </head>
