@@ -13,5 +13,4 @@ img:
 I have started a podcast. Its an actual play D&D podcast and you should check it out 
 
 {:.text}
-It's avaible at [folksandfables.net](https://folksandfables.net) where you can find a link to you podcast app of choice or just add the RSS feed to your app with this url [https://feeds.fireside.fm/folkandfables/rss](https://feeds.fireside.fm/folkandfables/rss)
-
+It's avaible at [folksandfables.net](https://folksandfables.net) where you can find a link to you podcast app of choice or just add the RSS feed to your app with this url [https://folksandfables.net/rss](https://folksandfables.net/rss)
