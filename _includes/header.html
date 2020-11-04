@@ -1,36 +1,36 @@
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
-		<meta http-equiv='X-UA-Compatible' content='IE=edge'>
-		<meta name="theme-color" content="#ffffff">
-		<meta name="author" content="Jack Guinane, Quinn Pollock" />
-		<link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="/feed.xml">
-		<link rel="alternate" type="application/json" title="{{ site.title }}" href="/feed.json">
-        <link href="/assets/css/style.css" rel="stylesheet" type="text/css">
-		<link rel="icon" href="/assets/images/logo.png"  type="image/png" />
-		<link key="apple-touch-icon" rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple_touch_logo.png">
-        <link id="favicon" rel="shortcut icon" type="image/png" href="/assets/images/favicon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
-		<script type="text/javascript" src="/assets/js/script.js"></script>
-		<meta name="twitter:card" content="summary_large_image">
-		<meta name="twitter:site" content="@holopollock">
-		{% if page.author %}
-		<meta name="twitter:creator" content="{{ page.author }}">
-		{% endif %}
-		<meta name="twitter:title" content="{{ page.title }}">
-		{% if page.short %}
-		<meta name="twitter:description" content="{{ page.short }}">
-		{% else %}
-		<meta name="twitter:description" content="Quinn Pollock's Site">
-		{% endif %}
-		{% if page.image.thumb %}
-		<meta name="twitter:image" content="{{ site.url }}/{{ page.image.thumb }}">
-		{% else %}
-		<meta name="twitter:image" content="{{ site.url }}/assets/images/twittercard.jpg">
-		{% endif %}
-		<meta property="twitter:card" content="summary_large_image">
-		{% seo %}
-	</head>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<meta name="theme-color" content="#ffffff">
+	<meta name="author" content="Jack Guinane, Quinn Pollock" />
+	<link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="/feed.xml">
+	<link rel="alternate" type="application/json" title="{{ site.title }}" href="/feed.json">
+	<link href="/assets/css/style.css" rel="stylesheet" type="text/css">
+	<link rel="icon" href="/assets/images/logo.png" type="image/png" />
+	<link key="apple-touch-icon" rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple_touch_logo.png">
+	<link id="favicon" rel="shortcut icon" type="image/png" href="/assets/images/favicon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+	<script type="text/javascript" src="/assets/js/script.js"></script>
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@holopollock">
+	{% if page.author %}
+	<meta name="twitter:creator" content="{{ page.author }}">
+	{% endif %}
+	<meta name="twitter:title" content="{{ page.title }}">
+	{% if page.short %}
+	<meta name="twitter:description" content="{{ page.short }}">
+	{% else %}
+	<meta name="twitter:description" content="Quinn Pollock's Site">
+	{% endif %}
+	{% if page.image.thumb %}
+	<meta name="twitter:image" content="{{ site.url }}/{{ page.image.thumb }}">
+	{% else %}
+	<meta name="twitter:image" content="{{ site.url }}/assets/images/twittercard.jpg">
+	{% endif %}
+	{% seo %}
+</head>
