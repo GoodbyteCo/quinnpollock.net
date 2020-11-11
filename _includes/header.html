@@ -23,7 +23,7 @@
 	{% else %}
 	<meta name="twitter:description" content="Quinn Pollock's Site">
 	{% endif %}
-	{% if !(page.img.thumb) %}
+	{% if page.img.thumb == nil %}
 	<meta name="twitter:image" content="{{ site.url }}/assets/images/twittercard.jpg">
 	{% endif %}
 	{% seo %}
