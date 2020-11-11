@@ -18,18 +18,12 @@
 	<script type="text/javascript" src="/assets/js/script.js"></script>
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:site" content="@holopollock">
-	{% if page.author %}
-	<meta name="twitter:creator" content="{{ page.author }}">
-	{% endif %}
-	<meta name="twitter:title" content="{{ page.title }}">
 	{% if page.short %}
 	<meta name="twitter:description" content="{{ page.short }}">
 	{% else %}
 	<meta name="twitter:description" content="Quinn Pollock's Site">
 	{% endif %}
-	{% if page.img.thumb %}
-	<meta name="twitter:image" content="{{ site.url }}/{{ page.img.thumb }}">
-	{% else %}
+	{% if !(page.img.thumb) %}
 	<meta name="twitter:image" content="{{ site.url }}/assets/images/twittercard.jpg">
 	{% endif %}
 	{% seo %}
