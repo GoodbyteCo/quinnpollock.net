@@ -43,7 +43,7 @@ img:
 {% include image.html url="/assets/images/IMG_3257" description="Swing Pockets" width="70%" %}
 
  {:.text}
- Overall this is a bag that has a way it wants you to use it. It's a bag that knows what it is and doesn't try to be anything more, which is commendable. However, it is something you need to keep in mind. If that sounds great, you think this is the backpack for you can buy it [here][bag][^3] Baron Fig recently added some really excellent colour variants for the bag I'm particularly a fan of the Glacier Blue/Yellowgold varient. But, what I learned after about a year of using this bag is that it wasn't for me, and that's ok.
+ Overall this is a bag that has a way it wants you to use it. It's a bag that knows what it is and doesn't try to be anything more, which is commendable. However, it is something you need to keep in mind. If that sounds great, and you think this is the backpack for you can buy it [here][bag][^3] at the time of writing its $85. Aswell Baron Fig recently added some really excellent colour variants for the bag I'm particularly a fan of the Glacier Blue/Yellowgold varient. But, what I learned after about a year of using this bag is that it wasn't for me, and that's ok.
 
  [^1]: Now known as the Venture Slimline Backpack
  [^2]: One small note the straps are not padded so if that matters to you now you know
