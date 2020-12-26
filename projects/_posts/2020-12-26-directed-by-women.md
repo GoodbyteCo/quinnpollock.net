@@ -3,7 +3,7 @@ layout: ideas
 title:  Directed By Women
 author: Quinn Pollock
 short:  A site for when you want to see how many film you watched directed by women
-description: A site for when you don't know what to watch 
+description: A site for when you want to see how many film you watched directed by women
 image: assets/images/DirectedByWomen.jpeg
 img:
     thumb: assets/images/DirectedByWomen.jpeg
