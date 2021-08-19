@@ -1,4 +1,4 @@
-module quinnNetlifyTest
+module github.com/Goodbyteco/quinnpollock.net
 
 go 1.16
 
