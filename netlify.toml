@@ -7,3 +7,13 @@
   from = "/gnds335"
   to = "/projects/gnds335"
   status = 301
+
+[build]
+  base = "/"
+  command = "make build"
+  publish = "/_site"
+  functions = "/functions"
+
+[build.environment]
+  GO_VERSION = "1.16"
+  GO_IMPORT_PATH = "github.com/GoodbyteCo/quinnpollock.net"
