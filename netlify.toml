@@ -11,7 +11,7 @@
 [build]
   base = "/"
   command = "make build"
-  publish = "/_site"
+  publish = "/_site/"
   functions = "/functions"
 
 [build.environment]
