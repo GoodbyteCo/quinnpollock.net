@@ -1,0 +1,15 @@
+<span id="lastfilm"></span>
+
+<script>
+    fetch("/.netlify/functions/currentFilm")
+        .then(function (response) {
+            return response.json();
+        }).then(function (data) {
+            const film = data.title;
+            const link = data.link;
+            var aTag = document.createElement('a');
+            aTag.setAttribute('href', link);
+            aTag.textContent = film;
+            document.getElementById("lastfilm").appendChild(aTag);
+        });
+</script>
