@@ -73,4 +73,31 @@ layout: default
 
 
     </div>
+    <div class="post-section">
+        <h3>
+            Recent Doings
+        </h3>
+        <ul class="list-posts">
+            <li>
+                <strong>What I Just Read:</strong> Trans Girl Suicide Museum
+            </li>
+            <li>
+                <strong>I Just Watched: </strong> <a id="recent-film"></a>
+            </li>
+            <li>
+                <strong>What I'm Thinking:</strong> Be your sagittarius sun not your aquarius moon
+            </li>
+        </ul>
+    </div>
 </section>
+
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        fetch("/.netlify/functions/currentFilm").then((json) => {
+            const film = document.getElementById("recent-film")
+            film.href = json.link
+            film.innerHTML = json.title.split(',')[0]
+
+        })
+    })
+</script>
