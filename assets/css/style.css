@@ -552,8 +552,8 @@ h3
 
 #posts-section
 {
-	display: flex;
-	justify-content: space-evenly;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
 	max-width: 1000px;
 }
 
