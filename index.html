@@ -97,7 +97,7 @@ layout: default
             const film = document.getElementById("recent-film")
             console.log(data)
             const link = data.link.split('https://letterboxd.com')
-            film.href = `${link[0]}/holopollock${link[1]}`
+            film.href = `https://letterboxd.com${link[0]}/holopollock${link[1]}`
             film.innerHTML = data.title.split(',')[0]
 
         })
