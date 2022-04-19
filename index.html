@@ -93,11 +93,11 @@ layout: default
 
 <script>
     window.addEventListener('DOMContentLoaded', (event) => {
-        fetch("/.netlify/functions/currentFilm").then((json) => {
+        fetch("/.netlify/functions/currentFilm").then(response => response.json()).then((data) => {
             const film = document.getElementById("recent-film")
-            console.log(json.json)
-            film.href = json.json.link
-            film.innerHTML = json.json.title.split(',')[0]
+            console.log(data)
+            film.href = data.link
+            film.innerHTML = data.title.split(',')[0]
 
         })
     })
