@@ -79,7 +79,9 @@ layout: default
         </h3>
         <ul class="list-posts">
             <li>
-                <strong>What I Just Read:</strong> Trans Girl Suicide Museum
+                <strong>What I Just Read:</strong> <a
+                    href="https://www.spdbooks.org/Products/9781948434065/trans-girl-suicide-museum.aspx"
+                    rel="_nofollow">Trans Girl Suicide Museum</a>
             </li>
             <li>
                 <strong>I Just Watched: </strong> <a id="recent-film"></a>
@@ -95,11 +97,14 @@ layout: default
     window.addEventListener('DOMContentLoaded', (event) => {
         fetch("/.netlify/functions/currentFilm").then(response => response.json()).then((data) => {
             const film = document.getElementById("recent-film")
-            console.log(data)
             const link = data.link.split('https://letterboxd.com')
             film.href = `https://letterboxd.com${link[0]}/holopollock${link[1]}`
             film.innerHTML = data.title.split(',')[0]
 
+        }).catch((reject) => {
+            const film = document.getElementById("recent-film")
+            film.href = "https://letterboxd.com/holopollock/films/diary/"
+            film.innerHTML = "My Letterboxd"
         })
     })
 </script>
