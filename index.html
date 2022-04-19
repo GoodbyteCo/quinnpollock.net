@@ -95,8 +95,9 @@ layout: default
     window.addEventListener('DOMContentLoaded', (event) => {
         fetch("/.netlify/functions/currentFilm").then((json) => {
             const film = document.getElementById("recent-film")
-            film.href = json.link
-            film.innerHTML = json.title.split(',')[0]
+            console.log(json.json)
+            film.href = json.json.link
+            film.innerHTML = json.json.title.split(',')[0]
 
         })
     })
