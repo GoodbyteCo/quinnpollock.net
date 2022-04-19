@@ -1,5 +1,5 @@
 ---
-title: Quinn's Home Page 
+title: Quinn's Home Page
 layout: default
 ---
 
@@ -8,15 +8,22 @@ layout: default
     <h1 class="indent-01">I'm Quinn Pollock</h1>
     <h6 class="circle">I'm a</h6>
     <h3 class="indent-02">
-        Podcast enthusiast,
-        <br>Pen &amp; Paper aficionado,
-        <br>ttRPG nerd,
-        <br>and Musical Obsessed
-        <br>Computer science student at queen’s university
+        Programmer
+        <br>Nerd,
+        <br>Queer & Trans,
+        <br>Girl on Many Hobbies
         <br>They/Them
+        <br>here are my thoughts
     </h3>
-    <img id="img-01" src="/assets/images/quinn.jpg" alt="Quinn Pollock standing in a lavender patch">
-    <svg id="arrow-down-01" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 21.883l-6.235-7.527-.765.644 7.521 9 7.479-9-.764-.645-6.236 7.529v-21.884h-1v21.883z"/></svg>
+    <picture>
+        <source id="img-01" type="image/avif" srcset="/assets/images/PhotoQuinn.avif" />
+        <source id="img-01" type="image/webp" srcset="/assets/images/PhotoQuinn.webp" />
+        <img id="img-01" src="/assets/images/PhotoQuinn.jpg" } alt=Quinn Wearing an orange sweater on green pants
+            standing on a vancouver street />
+    </picture>
+    <svg id="arrow-down-01" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
+        clip-rule="evenodd">
+        <path d="M11 21.883l-6.235-7.527-.765.644 7.521 9 7.479-9-.764-.645-6.236 7.529v-21.884h-1v21.883z" /></svg>
 </section>
 
 
@@ -27,21 +34,21 @@ layout: default
         </h3>
         <ul class="list-posts">
             {% for post in site.categories.projects limit:3 %}
-            <li><a href="{{ post.url }}">{{ post.title }}</a>: {{ post.short }} — 
-                {% assign d = post.date | date: "%-d" %} 
-                {% assign m = post.date | date: "%B" %} 
+            <li><a href="{{ post.url }}">{{ post.title }}</a>: {{ post.short }} —
+                {% assign d = post.date | date: "%-d" %}
+                {% assign m = post.date | date: "%B" %}
                 {% case m %}
-                  {% when 'April' or 'May' or 'June' or 'July' %}{{ m }}{% when 'September' %}Sept.{% else %}{{ post.date | date: "%b" }}.{% endcase %}
+                {% when 'April' or 'May' or 'June' or 'July' %}{{ m }}{% when 'September' %}Sept.{% else %}{{ post.date | date: "%b" }}.{% endcase %}
                 {% case d %}
-                  {% when '1' or '21' or '31' %}{{ d }}st{% when '2' or '22' %}{{ d }}nd{% when '3' or '23' %}{{ d }}rd{% else %}{{d}}th{% endcase %}, 
-                {{ post.date | date: "%Y" }} 
+                {% when '1' or '21' or '31' %}{{ d }}st{% when '2' or '22' %}{{ d }}nd{% when '3' or '23' %}{{ d }}rd{% else %}{{d}}th{% endcase %},
+                {{ post.date | date: "%Y" }}
             </li>
-            {% endfor %} 
+            {% endfor %}
             <li>
                 <a href="/projects">See More...</a>
             </li>
         </ul>
-        
+
     </div>
     <div class="post-section">
         <h3>
@@ -49,22 +56,55 @@ layout: default
         </h3>
         <ul class="list-posts">
             {% for post in site.categories.ideas limit:3 %}
-            <li><a href="{{ post.url }}">{{ post.title }}</a>: {{ post.short }} — 
-                {% assign d = post.date | date: "%-d" %} 
-                {% assign m = post.date | date: "%B" %} 
+            <li><a href="{{ post.url }}">{{ post.title }}</a>: {{ post.short }} —
+                {% assign d = post.date | date: "%-d" %}
+                {% assign m = post.date | date: "%B" %}
                 {% case m %}
-                  {% when 'April' or 'May' or 'June' or 'July' %}{{ m }}{% when 'September' %}Sept.{% else %}{{ post.date | date: "%b" }}.{% endcase %}
+                {% when 'April' or 'May' or 'June' or 'July' %}{{ m }}{% when 'September' %}Sept.{% else %}{{ post.date | date: "%b" }}.{% endcase %}
                 {% case d %}
-                  {% when '1' or '21' or '31' %}{{ d }}st{% when '2' or '22' %}{{ d }}nd{% when '3' or '23' %}{{ d }}rd{% else %}{{d}}th{% endcase %}, 
-                {{ post.date | date: "%Y" }} 
+                {% when '1' or '21' or '31' %}{{ d }}st{% when '2' or '22' %}{{ d }}nd{% when '3' or '23' %}{{ d }}rd{% else %}{{d}}th{% endcase %},
+                {{ post.date | date: "%Y" }}
             </li>
-            {% endfor %} 
+            {% endfor %}
             <li>
                 <a href="/ideas">See More...</a>
             </li>
         </ul>
-        
-        
+
+
+    </div>
+    <div class="post-section">
+        <h3>
+            Recent Doings
+        </h3>
+        <ul class="list-posts">
+            <li>
+                <strong>What I Just Read:</strong> <a
+                    href="https://www.spdbooks.org/Products/9781948434065/trans-girl-suicide-museum.aspx"
+                    rel="_nofollow">Trans Girl Suicide Museum</a>
+            </li>
+            <li>
+                <strong>I Just Watched: </strong> <a id="recent-film"></a>
+            </li>
+            <li>
+                <strong>What I'm Thinking:</strong> Be your sagittarius sun not your aquarius moon
+            </li>
+        </ul>
     </div>
 </section>
 
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        fetch("/.netlify/functions/currentFilm").then(response => response.json()).then((data) => {
+            const film = document.getElementById("recent-film")
+            const link = data.link.split('https://letterboxd.com')
+            film.href = `https://letterboxd.com${link[0]}/holopollock${link[1]}`
+            film.innerHTML = data.title.split(',')[0]
+
+        }).catch((reject) => {
+            const film = document.getElementById("recent-film")
+            film.href = "https://letterboxd.com/holopollock/films/diary/"
+            film.innerHTML = "My Letterboxd"
+        })
+    })
+</script>
