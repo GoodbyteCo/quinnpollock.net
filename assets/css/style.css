@@ -519,6 +519,13 @@ h3
 	margin-top: 21px;
 }
 
+
+.indent-02 a{
+	color: #000;
+	text-decoration: none;
+}
+
+
 #img-01
 {
 	width: 50%;
@@ -961,7 +968,7 @@ a
 		text-align: center;
 		margin-top: 1rem;
 	}
-	
+
 	h1.indent-01
 	{
 		font-size: calc(3rem + 1vw);

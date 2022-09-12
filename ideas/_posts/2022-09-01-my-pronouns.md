@@ -19,7 +19,7 @@ I went with **them**.
 
 At least I think it was **hers**.
 
-**She** bought **themself** a coffee and a pastry.
+**They** bought **themself** a coffee and a pastry.
 
 
 
