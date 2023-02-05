@@ -82,6 +82,7 @@ type RecentTrackResponse struct {
 	SongName string `json:"name"`
 	Artist   string `json:"artist"`
 	Album    string `json:"album"`
+	AlbumArt string `json:"albumArt"`
 	Url      string `json:"url"`
 }
 
@@ -90,8 +91,18 @@ func formatResults(track Track) RecentTrackResponse {
 		SongName: track.Name,
 		Artist:   track.Artist.Name,
 		Album:    track.Album.Name,
+		AlbumArt: getAlbumArtOfSizeFromTrack(track, Large),
 		Url:      track.Url,
 	}
+}
+
+func getAlbumArtOfSizeFromTrack(track Track, size Size) string {
+	for _, albumArt := range track.Image {
+		if albumArt.Size == size {
+			return albumArt.Link
+		}
+	}
+	return ""
 }
 
 func getMostRecentTrack() (error, Track) {
