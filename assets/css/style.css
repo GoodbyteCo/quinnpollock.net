@@ -1060,3 +1060,10 @@ a
 		grid-column-end: 4;
 	}
 }
+
+@media screen and (max-width: 470px) {
+	#post-section {
+		display: block;
+	}
+}
+
