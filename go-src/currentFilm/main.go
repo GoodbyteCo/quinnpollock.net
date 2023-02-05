@@ -53,7 +53,7 @@ func getImageLink(link string) string {
 	afterSrc := link[i+5:]
 	end := strings.Index(afterSrc, "/>")
 	fullLink := afterSrc[:end-1]
-	return strings.Replace(fullLink, "0-600-0-900", "0-300-0-450", 1)
+	return strings.Replace(fullLink, "0-600-0-900", "0-150-0-225", 1)
 } 
 
 

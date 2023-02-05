@@ -112,8 +112,8 @@ layout: default
                 song.removeChild(song.lastChild)
             }
             song.appendChild(image)
-            image.height = "80px"
-            image.width = "80px"
+            image.height = "80"
+            image.width = "80"
             name.innerHTML = `${lastFMData.name}`
             artist.innerHTML = `${lastFMData.artist}`
         })
@@ -126,6 +126,8 @@ layout: default
             const filmImage = document.createElement('img')
             filmImage.src = data.image
             filmImage.alt = data.title.split(',')[0]
+            filmImage.height = "100"
+            filmImage.width = "67"
             film.appendChild(filmImage)
             film.href = `https://letterboxd.com${link[0]}/holopollock${link[1]}`
             filmName.innerHTML = data.title.split(',')[0]
