@@ -83,7 +83,7 @@ layout: default
                     rel="_nofollow">Meanwhile Elsewhere</a>
             </li>
             <li>
-                <strong>I Just Watched: </strong> <a id="recent-film">Loading...</a>
+                <strong>I Just Watched: </strong> <a id="recent-film"><span id="film-name">Loading...</span></a>
             </li>
             <li>
                 <strong>What I'm Listening to: </strong> <a id="recent-song">
@@ -121,9 +121,14 @@ layout: default
     window.addEventListener('DOMContentLoaded', (event) => {
         fetch("/.netlify/functions/currentFilm").then(response => response.json()).then((data) => {
             const film = document.getElementById("recent-film")
+            const filmName = document.getElementById("film-name")
             const link = data.link.split('https://letterboxd.com')
+            const filmImage = document.createElement('img')
+            filmImage.src = data.image
+            filmImage.alt = data.title.split(',')[0]
+            film.appendChild(filmImage)
             film.href = `https://letterboxd.com${link[0]}/holopollock${link[1]}`
-            film.innerHTML = data.title.split(',')[0]
+            filmName.innerHTML = data.title.split(',')[0]
 
         }).catch((reject) => {
             const film = document.getElementById("recent-film")
