@@ -15,5 +15,5 @@
   functions = "/functions"
 
 [build.environment]
-  GO_VERSION = "1.16"
+  GO_VERSION = "1.19"
   GO_IMPORT_PATH = "github.com/GoodbyteCo/quinnpollock.net"

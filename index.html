@@ -100,14 +100,16 @@ layout: default
     function getSongListeningTo() {
         fetch("/.netlify/functions/lastFm").then(response => response.json()).then((lastFMData) => {
             const song = document.querySelector("#recent-song")
+            const name = document.getElementById("song-name")
+            const artist = document.getElementById('artist-name')
             const link = lastFMData.url
             song.href = link
             const image = document.createElement('img')
             image.src = lastFMData.albumArt
             image.alt = `Album: ${lastFMData.album} - ${lastFMData.name}: ${lastFMData.artist}`
             song.appendChild(image)
-            song.getElementById("song-name").innerHTML = `${lastFMData.name}: `
-            song.getElementById("artist-name").innerHTML = `${lastFMData.artist}`
+            name.innerHTML = `${lastFMData.name}: `
+            artist.innerHTML = `${lastFMData.artist}`
         })
     }
     window.addEventListener('DOMContentLoaded', (event) => {
