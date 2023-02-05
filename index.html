@@ -86,7 +86,7 @@ layout: default
                 <strong>I Just Watched: </strong> <a id="recent-film">Loading...</a>
             </li>
             <li>
-                <strong>What I'm Listening to: </strong> <a id="recent-song">Loading...</a>
+                <strong>What I'm Listening to: </strong> <a id="recent-song"><span>Loading...</span></a>
             </li>
             <li>
                 <strong>What I'm Thinking:</strong> Yoo I'm Trans and a Girl but also not a girl here to vibe
@@ -98,10 +98,14 @@ layout: default
 <script>
     function getSongListeningTo() {
         fetch("/.netlify/functions/lastFm").then(response => response.json()).then((lastFMData) => {
-            const song = document.getElementById("recent-song")
+            const song = document.querySelector("#recent-song")
             const link = lastFMData.url
             song.href = link
-            song.innerHTML = `${lastFMData.name}: ${lastFMData.artist}`
+            const image = document.createElement('img')
+            image.src = lastFMData.albumArt
+            image.alt = `${lastFMData.name}: ${lastFMData.artist}`
+            song.appendChild(image)
+            song.querySelector(span).innerHTML = `${lastFMData.name}: ${lastFMData.artist}`
         })
     }
     window.addEventListener('DOMContentLoaded', (event) => {
