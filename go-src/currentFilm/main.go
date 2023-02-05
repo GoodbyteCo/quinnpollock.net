@@ -50,10 +50,10 @@ func linkTransformer(link string) string {
 
 func getImageLink(link string) string {
 	i := strings.Index(link, "src")
-	afterSrc := link[i+4:]
+	afterSrc := link[i+5:]
 	end := strings.Index(afterSrc, "/>")
-	fullLink := afterSrc[:end]
-	return strings.Replace(fullLink, "0-600-0-900", "0-100-0-300", 1)
+	fullLink := afterSrc[:end-1]
+	return strings.Replace(fullLink, "0-600-0-900", "0-300-0-450", 1)
 } 
 
 
