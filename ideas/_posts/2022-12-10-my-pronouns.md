@@ -1,6 +1,6 @@
 ---
 layout: ideas
-title: My Pronouns are They/She
+title: My Pronouns are She/They
 author: Quinn Pollock
 short: My Pronouns and how to use this
 description: My Pronouns and how to use this
