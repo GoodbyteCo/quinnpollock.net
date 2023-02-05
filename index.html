@@ -105,7 +105,7 @@ layout: default
             image.src = lastFMData.albumArt
             image.alt = `${lastFMData.name}: ${lastFMData.artist}`
             song.appendChild(image)
-            song.querySelector(span).innerHTML = `${lastFMData.name}: ${lastFMData.artist}`
+            song.querySelector('span').innerHTML = `${lastFMData.name}: ${lastFMData.artist}`
         })
     }
     window.addEventListener('DOMContentLoaded', (event) => {
