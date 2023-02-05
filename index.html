@@ -86,13 +86,24 @@ layout: default
                 <strong>I Just Watched: </strong> <a id="recent-film">Loading...</a>
             </li>
             <li>
-                <strong>What I'm Thinking:</strong> Be your sagittarius sun not your aquarius moon
+                <strong>What I'm Listening to: </strong> <a id="recent-song">Loading...</a>
+            </li>
+            <li>
+                <strong>What I'm Thinking:</strong> Yoo I'm Trans and a Girl but also not a girl here to vibe
             </li>
         </ul>
     </div>
 </section>
 
 <script>
+    function getSongListeningTo() {
+        fetch("/.netlify/functions/lastFm").then(response => response.json()).then((lastFMData) => {
+            const song = document.getElementById("recent-song")
+            const link = lastFMData.url
+            song.href = link
+            song.innerHTML = `${lastFMData.name}: ${lastFMData.artist}`
+        })
+    }
     window.addEventListener('DOMContentLoaded', (event) => {
         fetch("/.netlify/functions/currentFilm").then(response => response.json()).then((data) => {
             const film = document.getElementById("recent-film")
@@ -105,5 +116,7 @@ layout: default
             film.href = "https://letterboxd.com/holopollock/films/diary/"
             film.innerHTML = "My Letterboxd"
         })
+        getSongListeningTo()
+        setInterval(getSongListeningTo, 300000)
     })
 </script>

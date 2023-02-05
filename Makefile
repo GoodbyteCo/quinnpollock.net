@@ -1,5 +1,5 @@
 build:
-	jekyll build
+	bundle exec jekyll build
 	mkdir -p functions
 	GOOS=linux
 	GOARCH=amd64
