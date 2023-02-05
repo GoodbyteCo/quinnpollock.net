@@ -116,6 +116,10 @@ layout: default
             image.width = "80"
             name.innerHTML = `${lastFMData.name}`
             artist.innerHTML = `${lastFMData.artist}`
+        }).catch((reject) => {
+            const song = document.querySelector("#recent-song")
+            song.href = "https://www.last.fm/user/holopollock"
+            song.innerHTML = "My Last FM"
         })
     }
     window.addEventListener('DOMContentLoaded', (event) => {
