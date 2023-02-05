@@ -97,7 +97,7 @@ layout: default
 
 <script>
     function getSongListeningTo() {
-        fetch("/.netlify/functions/lastFM").then(response => response.json()).then((lastFMData) => {
+        fetch("/.netlify/functions/lastFm").then(response => response.json()).then((lastFMData) => {
             const song = document.getElementById("recent-song")
             const link = lastFMData.url
             song.href = link
@@ -118,8 +118,5 @@ layout: default
         })
         getSongListeningTo()
         setInterval(getSongListeningTo, 300000)
-
-
-
     })
 </script>
