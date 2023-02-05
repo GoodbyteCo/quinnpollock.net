@@ -79,16 +79,16 @@ layout: default
         </h3>
         <ul class="list-posts">
             <li>
-                <strong>What I Just Read:</strong> <a href="https://www.littlepuss.net/shop/p/meanwhile-elsewhere"
-                    rel="_nofollow">Meanwhile Elsewhere</a>
-            </li>
-            <li>
-                <strong>I Just Watched: </strong> <a id="recent-film">Loading...</a>
+                <strong>I Just Watched: </strong> <a id="recent-film"><span id="film-name">Loading...</span></a>
             </li>
             <li>
                 <strong>What I'm Listening to: </strong> <a id="recent-song">
                     <div id="song-artist"><span id="song-name">Loading...</span><span id="artist-name"></span></div>
                 </a>
+            </li>
+            <li>
+                <strong>What I Just Read:</strong> <a href="https://www.littlepuss.net/shop/p/meanwhile-elsewhere"
+                    rel="_nofollow">Meanwhile Elsewhere</a>
             </li>
             <li>
                 <strong>What I'm Thinking:</strong> Yoo I'm Trans and a Girl but also not a girl here to vibe
@@ -112,8 +112,8 @@ layout: default
                 song.removeChild(song.lastChild)
             }
             song.appendChild(image)
-            image.height = "80px"
-            image.width = "80px"
+            image.height = "80"
+            image.width = "80"
             name.innerHTML = `${lastFMData.name}`
             artist.innerHTML = `${lastFMData.artist}`
         })
@@ -121,9 +121,16 @@ layout: default
     window.addEventListener('DOMContentLoaded', (event) => {
         fetch("/.netlify/functions/currentFilm").then(response => response.json()).then((data) => {
             const film = document.getElementById("recent-film")
+            const filmName = document.getElementById("film-name")
             const link = data.link.split('https://letterboxd.com')
+            const filmImage = document.createElement('img')
+            filmImage.src = data.image
+            filmImage.alt = data.title.split(',')[0]
+            filmImage.height = "100"
+            filmImage.width = "67"
+            film.appendChild(filmImage)
             film.href = `https://letterboxd.com${link[0]}/holopollock${link[1]}`
-            film.innerHTML = data.title.split(',')[0]
+            filmName.innerHTML = data.title.split(',')[0]
 
         }).catch((reject) => {
             const film = document.getElementById("recent-film")
