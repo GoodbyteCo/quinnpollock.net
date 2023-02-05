@@ -1,4 +1,5 @@
 build:
+	gem update --system
 	bundle exec jekyll build
 	mkdir -p functions
 	GOOS=linux
