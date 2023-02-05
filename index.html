@@ -86,7 +86,8 @@ layout: default
                 <strong>I Just Watched: </strong> <a id="recent-film">Loading...</a>
             </li>
             <li>
-                <strong>What I'm Listening to: </strong> <a id="recent-song"><span>Loading...</span></a>
+                <strong>What I'm Listening to: </strong> <a id="recent-song"><span id="song-name">Loading...</span><span
+                        id="artist-name"></span></a>
             </li>
             <li>
                 <strong>What I'm Thinking:</strong> Yoo I'm Trans and a Girl but also not a girl here to vibe
@@ -103,9 +104,10 @@ layout: default
             song.href = link
             const image = document.createElement('img')
             image.src = lastFMData.albumArt
-            image.alt = `${lastFMData.name}: ${lastFMData.artist}`
+            image.alt = `Album: ${lastFMData.album} - ${lastFMData.name}: ${lastFMData.artist}`
             song.appendChild(image)
-            song.querySelector('span').innerHTML = `${lastFMData.name}: ${lastFMData.artist}`
+            song.getElementById("song-name").innerHTML = `${lastFMData.name}: `
+            song.getElementById("artist-name").innerHTML = `${lastFMData.artist}`
         })
     }
     window.addEventListener('DOMContentLoaded', (event) => {
