@@ -86,8 +86,9 @@ layout: default
                 <strong>I Just Watched: </strong> <a id="recent-film">Loading...</a>
             </li>
             <li>
-                <strong>What I'm Listening to: </strong> <a id="recent-song"><span id="song-name">Loading...</span><span
-                        id="artist-name"></span></a>
+                <strong>What I'm Listening to: </strong> <a id="recent-song">
+                    <div id="song-artist"><span id="song-name">Loading...</span><span id="artist-name"></span></div>
+                </a>
             </li>
             <li>
                 <strong>What I'm Thinking:</strong> Yoo I'm Trans and a Girl but also not a girl here to vibe
@@ -107,8 +108,13 @@ layout: default
             const image = document.createElement('img')
             image.src = lastFMData.albumArt
             image.alt = `Album: ${lastFMData.album} - ${lastFMData.name}: ${lastFMData.artist}`
+            if (song.childNodes.length == 3) {
+                song.removeChild(song.lastChild)
+            }
             song.appendChild(image)
-            name.innerHTML = `${lastFMData.name}: `
+            image.height = "80px"
+            image.width = "80px"
+            name.innerHTML = `${lastFMData.name}`
             artist.innerHTML = `${lastFMData.artist}`
         })
     }

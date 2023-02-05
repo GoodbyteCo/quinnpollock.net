@@ -809,6 +809,29 @@ a
 	color: #dd0000;
 }
 
+#recent-song {
+	display: flex;
+    flex-direction: row-reverse;
+	justify-content: start;
+}
+
+#recent-song img {
+	height: 80px;
+    width: 80px;
+}
+
+
+#song-artist {
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.45em;
+}
+
+#artist-name {
+	font-style: italic;
+}
+
 @media screen and (max-width: 719px)
 {
 	body
