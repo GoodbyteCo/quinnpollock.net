@@ -813,6 +813,8 @@ a
 	display: flex;
     flex-direction: row-reverse;
 	justify-content: start;
+	margin: 0.4em 0;
+	gap: 1em;
 }
 
 #recent-song img {
