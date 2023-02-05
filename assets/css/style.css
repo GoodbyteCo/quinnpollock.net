@@ -848,6 +848,13 @@ a
 	width: 67px;
 }
 
+@media screen and (max-width: 999px) {
+	#posts-section {
+		max-width: 450px;
+	}
+
+}
+
 @media screen and (max-width: 719px)
 {
 	body
