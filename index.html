@@ -86,7 +86,9 @@ layout: default
                 <strong>I Just Watched: </strong> <a id="recent-film">Loading...</a>
             </li>
             <li>
-                <strong>What I'm Listening to: </strong> <a id="recent-song">Loading...</a>
+                <strong>What I'm Listening to: </strong> <a id="recent-song">
+                    <div id="song-artist"><span id="song-name">Loading...</span><span id="artist-name"></span></div>
+                </a>
             </li>
             <li>
                 <strong>What I'm Thinking:</strong> Yoo I'm Trans and a Girl but also not a girl here to vibe
@@ -98,10 +100,22 @@ layout: default
 <script>
     function getSongListeningTo() {
         fetch("/.netlify/functions/lastFm").then(response => response.json()).then((lastFMData) => {
-            const song = document.getElementById("recent-song")
+            const song = document.querySelector("#recent-song")
+            const name = document.getElementById("song-name")
+            const artist = document.getElementById('artist-name')
             const link = lastFMData.url
             song.href = link
-            song.innerHTML = `${lastFMData.name}: ${lastFMData.artist}`
+            const image = document.createElement('img')
+            image.src = lastFMData.albumArt
+            image.alt = `Album: ${lastFMData.album} - ${lastFMData.name}: ${lastFMData.artist}`
+            if (song.childNodes.length == 3) {
+                song.removeChild(song.lastChild)
+            }
+            song.appendChild(image)
+            image.height = "80px"
+            image.width = "80px"
+            name.innerHTML = `${lastFMData.name}`
+            artist.innerHTML = `${lastFMData.artist}`
         })
     }
     window.addEventListener('DOMContentLoaded', (event) => {
