@@ -24,6 +24,7 @@ const feed string = "https://letterboxd.com/holopollock/rss/"
 type film struct {
 	Title string `json:"title"`
 	Link string `json:"link"`
+	Image string `json:"image"`
 }
 
 func getRssFeed() *gofeed.Feed {
@@ -39,6 +40,7 @@ func getLatestMovie(feed *gofeed.Feed) film {
 	return film{
 		Title: feed.Items[0].Title,
 		Link: linkTransformer(feed.Items[0].Link),
+		Image: feed.Items[0].Description,
 	}
 }
 
