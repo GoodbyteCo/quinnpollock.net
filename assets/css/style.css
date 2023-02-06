@@ -848,6 +848,11 @@ a
 	width: 67px;
 }
 
+#is-playing {
+	display: none;
+	width: 15px;
+}
+
 @media screen and (max-width: 999px) {
 	#posts-section {
 		max-width: 450px;

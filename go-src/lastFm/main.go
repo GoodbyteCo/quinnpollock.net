@@ -84,6 +84,7 @@ type RecentTrackResponse struct {
 	Album    string `json:"album"`
 	AlbumArt string `json:"albumArt"`
 	Url      string `json:"url"`
+	IsPlaying bool `json:"isPlaying"`
 }
 
 func formatResults(track Track) RecentTrackResponse {
@@ -93,6 +94,7 @@ func formatResults(track Track) RecentTrackResponse {
 		Album:    track.Album.Name,
 		AlbumArt: getAlbumArtOfSizeFromTrack(track, Large),
 		Url:      track.Url,
+		IsPlaying: track.Attributes.IsPlaying,
 	}
 }
 

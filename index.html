@@ -83,7 +83,28 @@ layout: default
             </li>
             <li>
                 <strong>What I'm Listening to: </strong> <a id="recent-song">
+                    <div id="is-playing">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+                            <line style="stroke-linecap: round; stroke: rgb(129, 129, 129); stroke-width: 50px;"
+                                x1="115" y1="125" x2="115" y2="375">
+                                <animate attributeName="y1" values="125;300;200;250;125" begin=".5s" dur="1.5s"
+                                    repeatCount="indefinite" />
+                            </line>
+                            <line style="stroke-linecap: round; stroke: rgb(129, 129, 129); stroke-width: 50px;"
+                                x1="230" y1="125" x2="230" y2="375">
+                                <animate attributeName="y1" values="125;310;240;140;290;125" begin=".3s" dur="1.6s"
+                                    repeatCount="indefinite" />
+                            </line>
+                            <line style="stroke-linecap: round;  stroke: rgb(129, 129, 129); stroke-width: 50px;"
+                                x1="350" y1="125" x2="350" y2="375">
+                                <animate attributeName="y1" values="125;360;210;140;230;125" begin=".7s" dur="1.1s"
+                                    repeatCount="indefinite" />
+                            </line>
+                        </svg>
+                    </div>
                     <div id="song-artist"><span id="song-name">Loading...</span><span id="artist-name"></span></div>
+
+
                 </a>
             </li>
             <li>
@@ -103,13 +124,20 @@ layout: default
             const song = document.querySelector("#recent-song")
             const name = document.getElementById("song-name")
             const artist = document.getElementById('artist-name')
+            const isPlaying = document.getElementById('is-playing')
             const link = lastFMData.url
             song.href = link
             const image = document.createElement('img')
             image.src = lastFMData.albumArt
             image.alt = `Album: ${lastFMData.album} - ${lastFMData.name}: ${lastFMData.artist}`
-            if (song.childNodes.length == 3) {
+            if (song.childNodes.length == 4) {
                 song.removeChild(song.lastChild)
+            }
+            if (lastFMData.isPlaying) {
+                isPlaying.style.display = 'block'
+
+            } else {
+                isPlaying.style.display = 'none'
             }
             song.appendChild(image)
             image.height = "80"
