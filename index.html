@@ -84,7 +84,8 @@ layout: default
             <li>
                 <strong>What I'm Listening to: </strong> <a id="recent-song">
                     <div id="is-playing">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" aria-labelledby="now-playing-img" role="img">
+                            <title id="now-playing-img"> Song Currently Playing </title>
                             <line style="stroke-linecap: round; stroke: #d00; stroke-width: 50px;" x1="115" y1="125"
                                 x2="115" y2="375">
                                 <animate attributeName="y1" values="125;320;200;250;125" begin="0.5s" dur="1.5s"
