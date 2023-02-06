@@ -815,6 +815,7 @@ a
 	justify-content: start;
 	margin: 0.4em 0;
 	gap: 1em;
+	align-items: center;
 }
 
 #recent-song img {
@@ -846,6 +847,11 @@ a
 #recent-film img {
 	height: 100px;
 	width: 67px;
+}
+
+#is-playing {
+	display: none;
+	width: 15px;
 }
 
 @media screen and (max-width: 999px) {

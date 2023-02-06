@@ -68,7 +68,7 @@ type Track struct {
 	} `json:"album"`
 	Name       string `json:"name"`
 	Attributes struct {
-		IsPlaying bool `json:"nowplaying"`
+		IsPlaying string `json:"nowplaying"`
 	} `json:"@attr"`
 	Url string `json:"url"`
 }
@@ -79,20 +79,22 @@ type lastFMImage struct {
 }
 
 type RecentTrackResponse struct {
-	SongName string `json:"name"`
-	Artist   string `json:"artist"`
-	Album    string `json:"album"`
-	AlbumArt string `json:"albumArt"`
-	Url      string `json:"url"`
+	SongName  string `json:"name"`
+	Artist    string `json:"artist"`
+	Album     string `json:"album"`
+	AlbumArt  string `json:"albumArt"`
+	Url       string `json:"url"`
+	IsPlaying bool   `json:"isPlaying"`
 }
 
 func formatResults(track Track) RecentTrackResponse {
 	return RecentTrackResponse{
-		SongName: track.Name,
-		Artist:   track.Artist.Name,
-		Album:    track.Album.Name,
-		AlbumArt: getAlbumArtOfSizeFromTrack(track, Large),
-		Url:      track.Url,
+		SongName:  track.Name,
+		Artist:    track.Artist.Name,
+		Album:     track.Album.Name,
+		AlbumArt:  getAlbumArtOfSizeFromTrack(track, Large),
+		Url:       track.Url,
+		IsPlaying: parseJsBool(track.Attributes.IsPlaying),
 	}
 }
 
@@ -116,6 +118,13 @@ func getMostRecentTrack() (error, Track) {
 	defer resp.Body.Close()
 	json.NewDecoder(resp.Body).Decode(results)
 	return nil, results.Results.RecentTracks[0]
+}
+
+func parseJsBool(jsBool string) bool {
+	if jsBool == "true" {
+		return true
+	}
+	return false
 }
 
 func main() {
