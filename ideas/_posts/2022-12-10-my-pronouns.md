@@ -7,7 +7,7 @@ description: My Pronouns and how to use this
 ---
 
 {:.text}
-Some People find this a bit confusing. Basically it means that I use two sets of pronouns. Here is a little example of how to use my pronouns. 
+Some People find this a bit confusing. Basically it means that I use two sets of pronouns. Here is a little example of how to use my pronouns.
 
 ----
 
@@ -15,12 +15,10 @@ Some People find this a bit confusing. Basically it means that I use two sets of
 
 I went with **them**.
 
-**They** brought **her** computer.
+**They** brought **her** own computer.
 
 At least I think it was **hers**.
 
 **They** bought **themself** a coffee and a pastry.
-
-
 
 ----
